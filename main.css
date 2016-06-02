@@ -486,6 +486,7 @@ ul {
 .hot-commodity ul.tab-content li li.tab-img-li img{
 	width: 100%;
 	height: 100%;
+	transform: scale(0.9);
 }
 
 .notice{
@@ -643,9 +644,17 @@ ul {
 .commodity-floor .floor-sale ul li img{
 	display: inline-block;
 	margin-top: 10px;
+	transform: scale(0.9);
 	width: 180px;
 	height: 180px;
 }
+
+.commodity-floor .floor-sale ul li img:hover,
+.hot-commodity ul.tab-content li li.tab-img-li img:hover{
+	transform: scale(1);
+	transition: all .3s;
+}
+
 .commodity-floor .floor-sale ul li a{
 	display: block;
 	color: #666;
