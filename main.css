@@ -62,7 +62,7 @@ ul {
 }
 
 .ub-content i.city-ico {
-    background: url(images/all-bg.png) no-repeat -69px 0px;
+    background: url(images/all-bg.png) no-repeat -69px 1px;
 }
 
 .ub-content i.collection-ico {
@@ -72,7 +72,7 @@ ul {
 
 .ub-content i.phone-ico {
     margin-left: 30px;
-    background: url(images/all-bg.png) no-repeat -21px -1px;
+    background: url(images/all-bg.png) no-repeat -21px 0px;
 }
 
 .ub-content p.left-con span {
