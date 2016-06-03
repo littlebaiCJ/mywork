@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <title>乐购网</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="legou.ico">
 </head>
 
 <body>
     <div class="user-bar">
         <div class="ub-content">
-            <p class="left-con">切换城市:<span>北京<i class="city-ico"></i></span><i class="collection-ico"></i><a href="#">收藏乐购</a><i class="phone-ico"></i><a href="#">手机版</a></p>
+            <p class="left-con">切换城市:<span><a class="place" href="#">北京</a><i class="city-ico"></i></span><i class="collection-ico"></i><a href="#">收藏乐购</a><i class="phone-ico"></i><a href="#">手机版</a></p>
             <p class="right-con">您好,欢迎光临乐购商城！<a href="#">登录</a>|<a href="#">注册</a><span><a href="#">我的账户</a><i class="graydown-ico"></i></span><span><a href="#">我的订单</a></span><span><a href="#">帮助中心</a><i class="graydown-ico"></i></span></p>
         </div>
     </div>
@@ -457,7 +456,7 @@
     		<ul class="tab-content active">
     				<li>
     					<ul>
-    						<li class="count-down">剩余<span>09</span>小时<span>59</span>分<span>00</span>秒</li>
+    						<li class="count-down">剩余<span>08</span>小时<span>00</span>分<span>03</span>秒</li>
     						<li class="tab-img-li"><a href="#"><img src="images/1.jpg" alt=""></a></li>
     						<li><a href="#">[假期特惠]时尚毛衣</a></li>
     						<li><a href="#" class="hot-sale">火爆销售</a></li>
@@ -560,7 +559,7 @@
     				</li>
     				<li>
     					<ul>
-    						<li class="count-down">剩余<span>01</span>小时<span>01</span>分<span>05</span>秒</li>
+    						<li class="count-down">剩余<span>05</span>小时<span>01</span>分<span>05</span>秒</li>
     						<li class="tab-img-li"><a href="#"><img src="images/12.jpg" alt=""></a></li>
     						<li><a href="#">[假期特惠]户外背包</a></li>
     						<li><a href="#" class="hot-sale">火爆销售</a></li>
@@ -1414,6 +1413,42 @@
     			Copyright&copy 2016-2018 wucj版权所有
     		</p>
     	</div>
+    </div>
+    <div class="opacity-div">
+        <div class="pro-city">
+	        	<select name="province" id="province">
+	        		<option value="0">--请选择--</option>
+	        		<option value="1">广东</option>
+	        		<option value="2">北京</option>
+	        		<option value="3">福建</option>
+	        		<option value="4">湖南</option>
+	        		<option value="5">云南</option>
+	        		<option value="6">河南</option>
+	        	</select>
+	        	<select name="city" id="city" disabled="disabled">
+	        		<option value="0">--请选择--</option>
+	        		<option value="1">揭阳</option>
+	        		<option value="1">梅州</option>
+	        		<option value="1">潮州</option>
+	        		<option value="1">汕头</option>
+	        		<option value="2">北京</option>
+	        		<option value="3">厦门</option>
+	        		<option value="3">福州</option>
+	        		<option value="4">长沙</option>
+	        		<option value="4">株洲</option>
+	        		<option value="4">湘潭</option>
+	        		<option value="5">昆明</option>
+	        		<option value="5">曲靖</option>
+	        		<option value="5">玉溪</option>
+	        		<option value="6">郑州</option>
+	        		<option value="6">开封</option>
+	        		<option value="6">洛阳</option>
+	        	</select>
+	        	<div class="pc-btn">
+		        	<button id="confirm">确定</button>
+		        	<button id="cancel">取消</button>
+	        	</div>
+        </div>
     </div>
     <script src="jquery-2.2.0.min.js"></script>
     <script src="main.js"></script>

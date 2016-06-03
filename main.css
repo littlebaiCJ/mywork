@@ -30,6 +30,7 @@ ul {
     width: 100%;
     height: 30px;
     background: #f4f4f4;
+    position: relative;
 }
 
 .ub-content {
@@ -72,12 +73,11 @@ ul {
 
 .ub-content i.phone-ico {
     margin-left: 30px;
-    background: url(images/all-bg.png) no-repeat -21px -1px;
+    background: url(images/all-bg.png) no-repeat -21px 0px;
 }
 
 .ub-content p.left-con span {
-    padding: 0px 12px 0px 20px;
-    background: #d6d6d8;
+    padding: 0px 12px 0px 10px;
     display: inline-block;
 }
 
@@ -96,7 +96,7 @@ ul {
 }
 
 .ub-content p.right-con i.graydown-ico {
-    background: url(images/all-bg.png) no-repeat -98px 1px;
+    background: url(images/all-bg.png) no-repeat -98px 0px;
 }
 
 
@@ -726,4 +726,34 @@ ul {
 }
 .footer-content p.copyright{
 	margin-top: 30px;
+}
+/*省市联动层*/
+.opacity-div{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	background: rgba(0,0,0,0.5);
+	display: none;
+}
+.opacity-div .pro-city{
+	width: 300px;
+	height: 150px;
+	position: absolute;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin: 0 auto;
+	border-radius: 10px;
+	text-align: center;
+}
+#province,
+#city{
+	padding: 0px 30px;
+	margin-top: 50px;
+	text-align: center;
+}
+.pc-btn button{
+	width: 80px;
+	display: inline-block;
+	margin-top: 10px;
 }
