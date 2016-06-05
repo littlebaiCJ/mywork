@@ -38,32 +38,39 @@ $(function() {
     function countdown() {
         setInterval(function() {
             for (var i = 0; i < $('.count-down').length; i++) {
-                var hours = $('.count-down').eq(i).find('span').eq(0).text();
-                var minute = $('.count-down').eq(i).find('span').eq(1).text();
-                var second = $('.count-down').eq(i).find('span').eq(2).text();
-                second--;
-                if (second < 0) {
-                    second = 59;
-                } else if (second < 10) {
-                    second = '0' + second;
+                var futureDate = new Date(),
+                    nowDate = new Date(),
+                    h_inn = $('.count-down').eq(i).find('span').eq(0),
+                    m_inn = $('.count-down').eq(i).find('span').eq(1),
+                    s_inn = $('.count-down').eq(i).find('span').eq(2);
+
+                futureDate.setFullYear(2016, 05, 06);
+                futureDate.setHours(12);
+                futureDate.setMinutes(00);
+                futureDate.setSeconds(00);
+
+                var time = (futureDate.getTime() - nowDate.getTime()) / 1000,
+                    s = parseInt(time % 60),
+                    m = parseInt((time / 60) % 60),
+                    h = parseInt(time / 3600);
+
+                if (s <= 0 && m <= 0 && h <= 0) {
+                    $('.count-down').text('活动已下架~');
                 }
-                $('.count-down').eq(i).find('span').eq(2).text(second);
-                if (second == "00") {
-                    minute--;
-                    if (minute < 0) {
-                        minute = 59;
-                    } else if (minute < 10) {
-                        minute = '0' + minute;
-                    }
-                    $('.count-down').eq(i).find('span').eq(1).text(minute);
-                    if (minute == "59") {
-                        hours--;
-                        if (hours < 10) {
-                            hours = '0' + hours;
-                        }
-                        $('.count-down').eq(i).find('span').eq(0).text(hours);
-                    }
+
+                if (s < 10) {
+                    s = '0' + s;
                 }
+                if (m < 10) {
+                    m = '0' + m;
+                }
+                if (h < 10) {
+                    h = '0' + h;
+                }
+
+                s_inn.text(s);
+                m_inn.text(m);
+                h_inn.text(h);
             }
         }, 1000)
     }
@@ -92,11 +99,11 @@ $(function() {
         $('#city').html(city_html);
 
         $('#city').find("option[value!='" + proval + "']").remove();
-       if($('#province').find('option:selected').val()!=0){
+        if ($('#province').find('option:selected').val() != 0) {
             $('#city').removeAttr('disabled');
-       }else {
-             $('#city').attr('disabled','');
-       }
+        } else {
+            $('#city').attr('disabled', '');
+        }
     });
 
     $('.place').click(function(event) {
