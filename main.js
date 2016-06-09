@@ -44,7 +44,7 @@ $(function() {
                     m_inn = $('.count-down').eq(i).find('span').eq(1),
                     s_inn = $('.count-down').eq(i).find('span').eq(2);
 
-                futureDate.setFullYear(2016, 05, 06);
+                futureDate.setFullYear(2016, 05, 10);
                 futureDate.setHours(12);
                 futureDate.setMinutes(00);
                 futureDate.setSeconds(00);
